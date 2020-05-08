@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript">
-    window.onload = function(){
-             setInterval("toggleSound()",100);
-        }
+	<head>
+		<meta charset="utf-8">
+		<title> XXX</title>
+		
 
-    function toggleSound() {
-                var music = document.getElementById("audios");//获取ID  
-                    
-                if (music.paused) { //判读是否播放  
-                    music.paused=false;
-                    music.play(); //没有就播放 
-                }    
-        }
-</script>
-
-</head>
+	</head>
 
 
-<body>
+	<body>
+		<audio preload autoplay loop id="vd">
+			<source src="./music/saye.mp3" type="audio/mp3">
+		</audio>
 
-	<audio autoplay="autopaly" loop="loop" id="audios">
-		<source src="./music/music.mp3" type="audio/mp3" />
-	</audio>
 
 
-</body>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+				 setInterval("toggleSound()",100);
+			}
+
+		function toggleSound() {
+					var music = document.getElementById("vd");//获取ID  
+						
+					if (music.paused) { //判读是否播放  
+						music.paused=false;
+						music.play(); //没有就播放 
+					}    
+		}
+	</script>
 
 </html>
